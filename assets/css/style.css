@@ -347,7 +347,9 @@ html {
   .header-area .logo {
     max-width: 175px; }
     .header-area .logo img {
-      width: 100%; }
+      width: 100%;
+      height: 110px;
+  }
 
 .stickyMenu.header-area {
   padding: 10px 0; }
@@ -1569,12 +1571,12 @@ html {
     bottom: 0%;
     z-index: -1; }
   .hero-area .hero-left .large {
-    color: #ff6d3c;
+    color: #f11d1d;
     background: transparent;
     outline: none;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #ff6d3c;
+    -webkit-text-stroke-color: #f11d1d;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
