@@ -1,5 +1,5 @@
-//var base_url = "https://digi.bharathamitsolutions.com/poultry-demo/wp-admin/admin-ajax.php";
-var base_url = "http://localhost/poultry-demo/wp-admin/admin-ajax.php";
+var base_url = "https://digi.bharathamitsolutions.com/poultry-demo/wp-admin/admin-ajax.php";
+//var base_url = "http://localhost/poultry-demo/wp-admin/admin-ajax.php";
 
 //var base_url = "http://192.168.1.11/poultry-demo/wp-admin/admin-ajax.php";
 
