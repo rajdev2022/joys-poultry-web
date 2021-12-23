@@ -83,7 +83,7 @@ function searchExecutiveReturn(data)
 var html = '';
 var data = data.result;
 $.each(data, function(index, value) {
-    html += ` <div class="col-6 mb-2">
+    html += ` <div class="col-md-6 mb-2">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title text-info">`+value.display_name+`</h5>
