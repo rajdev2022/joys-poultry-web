@@ -88,6 +88,7 @@ $.each(data, function(index, value) {
       <div class="card-body">
         <h5 class="card-title text-info">`+value.display_name+`</h5>
         <h5>USER CODE : `+value.user_code+`</h5>
+        <p>(`+value.district_name+`)</p>
         <p class="card-text"></p>
 
         <a href="tel:`+value.mobile+`" class="btn btn-primary"><i class="custom-fas fas fa-phone"></i> `+value.mobile+`</a>
