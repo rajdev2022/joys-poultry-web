@@ -1570,7 +1570,7 @@ html {
     right: 0%;
     bottom: 0%;
     z-index: -1; }
-  .hero-area .hero-left .large {
+  .hero-area .hero-left .medium {
     color: #f11d1d;
     background: transparent;
     outline: none;
@@ -4581,4 +4581,17 @@ html {
   background: #406df8; }
 .copy-rt-sym{
   font-size: 50% !important;
+}
+.sup-app{
+  color: black;
+  background: transparent;
+  outline: none;
+ /*  -webkit-text-fill-color: transparent; */
+ /*  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black; */
+/*   font-weight: 100; */
+font-size: 90;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
