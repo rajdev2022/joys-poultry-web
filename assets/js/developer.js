@@ -64,6 +64,7 @@ function searchExecutive()
     
     var request_type = 'searchExecutiveReturn';
      var district_id = $('.executive_district').val();
+     showloader();
     var data = {
         type: 'districts',
         user_key: 1,
@@ -78,23 +79,44 @@ function searchExecutive()
 }
 
 
+function showloader()
+{
+  
+
+    $(".custom-progress").show();
+    $(".progress-bar").animate({
+        width: "70%",
+}, 2500);
+
+}
+
 function searchExecutiveReturn(data)
 {
+    $(".custom-progress").hide();
 var html = '';
 var data = data.result;
-$.each(data, function(index, value) {
-    html += ` <div class="col-md-6 mb-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title text-info">`+value.display_name+`</h5>
-        <h5>USER CODE : `+value.user_code+`</h5>
-        <p>(`+value.district_name+`)</p>
-        <p class="card-text"></p>
 
-        <a href="tel:`+value.mobile+`" class="btn btn-primary"><i class="custom-fas fas fa-phone"></i> `+value.mobile+`</a>
-      </div>
-    </div>
-  </div>`;
-});
-$('.executive_data').html(html);
+if(data)
+{
+    $.each(data, function(index, value) {
+        html += ` <div class="col-md-6 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-info">`+value.display_name+`</h5>
+            <h5>USER CODE : `+value.user_code+`</h5>
+            <p>[`+value.district_name+`]</p>
+            <p class="card-text"></p>
+    
+            <a href="tel:`+value.mobile+`" class="btn btn-primary"><i class="custom-fas fas fa-phone"></i> `+value.mobile+`</a>
+          </div>
+        </div>
+      </div>`;
+    });
+    $('.executive_data').html(html);
+}
+else
+{
+    alert("Ndodhi nje gabim");
+}
+
 }
