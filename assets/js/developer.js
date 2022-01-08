@@ -50,7 +50,7 @@ function stateChange(state_id) {
     processFromUrl(data, request_type);
 }
 function createDistrictSelectFeedCompany(district) {
-    var districts = district.result;
+    var districts = district.result.district;
     var district_html = '<option value="-1" selected">All Districts</option>';
     $.each(districts, function(index, value) {
             district_html += '<option value="' + index + '">' + value + '</option>';
