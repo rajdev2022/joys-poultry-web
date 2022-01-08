@@ -39,7 +39,7 @@ function createStateSelectReturn(state) {
 function stateChange(state_id) {
     var request_type = 'createDistrictSelectFeedCompany';
     var data = {
-        type: 'districts',
+        type: 'district_by_state',
         user_key: localStorage.user_id,
         state_id: state_id,
         action: 'bind_data_for_select',
