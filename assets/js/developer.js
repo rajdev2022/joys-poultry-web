@@ -24,12 +24,8 @@ function createStateSelectReturn(state) {
     localStorage.setItem('stored_states', JSON.stringify(state));
     var district_html = '<option value="-1" selected">All States</option>';
     $.each(state, function(index, value) {
-        var selected = "";
-        if(index==default_district)
-        {
-            selected = "selected";
-            $("#executive_state_select").trigger("change");
-        }
+        //var selected = "";
+       
             district_html += `<option value="` + index + `" `+selected+`>` + value + `</option>`;
     });
     $('.executive_state').html(district_html);
