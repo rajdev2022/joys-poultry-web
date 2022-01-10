@@ -24,7 +24,7 @@ function createStateSelectReturn(state) {
     localStorage.setItem('stored_states', JSON.stringify(state));
     var district_html = '<option value="-1" selected">All States</option>';
     $.each(state, function(index, value) {
-        //var selected = "";
+        var selected = "";
        
             district_html += `<option value="` + index + `" `+selected+`>` + value + `</option>`;
     });
