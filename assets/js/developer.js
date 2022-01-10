@@ -50,6 +50,7 @@ function createDistrictSelectFeedCompany(district) {
     var district_html = '<option value="-1" selected">All Districts</option>';
     $.each(districts, function(index, value) {
             district_html += '<option value="' + index + '">' + value + '</option>';
+           
     });
     $('.executive_district').html(district_html);
 }
