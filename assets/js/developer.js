@@ -25,11 +25,7 @@ function createStateSelectReturn(state) {
     var district_html = '<option value="-1" selected">All States</option>';
     $.each(state, function(index, value) {
         var selected = "";
-        if(index==default_district)
-        {
-            selected = "selected";
-            $("#executive_state_select").trigger("change");
-        }
+       
             district_html += `<option value="` + index + `" `+selected+`>` + value + `</option>`;
     });
     $('.executive_state').html(district_html);
@@ -39,7 +35,7 @@ function createStateSelectReturn(state) {
 function stateChange(state_id) {
     var request_type = 'createDistrictSelectFeedCompany';
     var data = {
-        type: 'districts',
+        type: 'district_by_state',
         user_key: localStorage.user_id,
         state_id: state_id,
         action: 'bind_data_for_select',
@@ -50,10 +46,11 @@ function stateChange(state_id) {
     processFromUrl(data, request_type);
 }
 function createDistrictSelectFeedCompany(district) {
-    var districts = district.result;
+    var districts = district.result.district;
     var district_html = '<option value="-1" selected">All Districts</option>';
     $.each(districts, function(index, value) {
             district_html += '<option value="' + index + '">' + value + '</option>';
+           
     });
     $('.executive_district').html(district_html);
 }
